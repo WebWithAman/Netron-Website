@@ -1,0 +1,597 @@
+/**********************************************************
+  Add Google Fonts
+**********************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:ital,wght@0,400;1,300;1,400');
+
+
+
+/**********************************************************
+  Reset Default Properties Start
+**********************************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 .4rem rgba(0, 0, 0, 0.288) inset;
+  background-color: var(--white);
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 7rem;
+}
+
+html {
+  font-size: 62.5%;
+  /* Now 1rem = 10px */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+/**********************************************************
+  Reset Default Properties End
+**********************************************************/
+
+
+/**********************************************************
+  Variables Start
+**********************************************************/
+:root {
+
+  /* Theme Colors */
+  --black: #000;
+  --white: #fff;
+  --primary-color: #f5c79d;
+  --first: #cf2600;
+  --second: #038d8c;
+  --third: #ffa400;
+  --grey-shade: #1d1d1de8;
+  --light-text: #424242;
+
+
+  /* Theme Fonts */
+
+  --font-family-1: 'Lato', sans-serif;
+  --font-family-2: 'Poppins', sans-serif;
+
+}
+
+/**********************************************************
+  Variables End
+**********************************************************/
+
+
+/**********************************************************
+  Common Properties to Frequently Used Elements Start
+**********************************************************/
+body {
+  text-transform: uppercase;
+  background-color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--font-family-2);
+}
+
+li {
+  list-style-type: none;
+  font-family: var(--font-family-2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-1);
+}
+
+p {
+  font-family: var(--font-family-2);
+  letter-spacing: .3px;
+  line-height: 19px;
+  word-spacing: 1.6px;
+}
+
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-2);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  transition: all .3s linear;
+}
+
+input,
+textarea {
+  outline: none;
+  background-color: transparent;
+  padding: 7px;
+  border: 2px solid var(--white);
+  text-transform: uppercase;
+  font-family: var(--font-family-2);
+  font-weight: 500;
+}
+
+img {
+  display: inline-block;
+}
+
+section {
+  width: 100%;
+}
+
+/**********************************************************
+  Common Properties to Frequently Used Elements End
+**********************************************************/
+
+
+
+/**********************************************************
+  Frequently Used Components In This Website Start
+**********************************************************/
+.section-header {
+  text-align: center;
+  padding: 0 8rem 5rem;
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.3rem;
+  color: var(--light-text);
+  font-weight: 600;
+}
+
+/**********************************************************
+Frequently Used Components In This Website End
+**********************************************************/
+
+
+/***********************************************************************************************
+  Actual Document Styling Start
+***********************************************************************************************/
+
+
+/**********************************************************
+  Wrapper Start
+**********************************************************/
+.wrapper {
+  width: 100vw;
+  height: auto;
+}
+
+/**********************************************************
+  Header Start
+**********************************************************/
+
+
+/**********************************************************
+  Nav Start
+**********************************************************/
+nav {
+  width: 100%;
+  background-color: var(--black);
+  z-index: 100;
+  position: relative;
+}
+
+.nav-center {
+  background-color: var(--grey-shade);
+  position: relative;
+  top: 20px;
+  padding-left: 1rem;
+  border-left: 5px solid var(--primary-color);
+
+}
+
+/**********************************************************
+  Logo Start
+**********************************************************/
+.logo-box .logo-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.logo-box h2 {
+  font-size: 2.4rem;
+  margin-left: 5px;
+  color: var(--white);
+}
+
+
+/**********************************************************
+  Nav-links Start
+**********************************************************/
+.nav-links ul li a {
+  padding: 1.6rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all .2s linear;
+  color: var(--white);
+}
+
+@media (hover:hover) {
+
+  .nav-links ul li:first-child a,
+  .nav-links ul li a:hover {
+    color: var(--white);
+    background-color: var(--light-text);
+  }
+
+}
+
+/**********************************************************
+  Toggle Button On Mobiles Start
+**********************************************************/
+.toggle-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--light-text);
+  font-size: 2.4rem;
+  display: grid;
+  place-items: center;
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
+
+/**********************************************************
+  Nav End
+**********************************************************/
+
+
+/**********************************************************
+  Hero Section Start
+**********************************************************/
+#hero-section {
+  min-height: 100vh;
+  background: url("../assets/images/banner.png") no-repeat scroll right;
+  background-size: 80% 100%;
+  position: relative;
+}
+
+#hero-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(20 20 20), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/**********************************************************
+  Hero Section Info Start
+**********************************************************/
+.hero-info {
+  padding-top: 20rem;
+  max-width: 450px;
+  z-index: 10;
+  position: relative;
+  color: var(--white);
+}
+
+.hero-info h1 {
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 5.3rem;
+}
+
+.hero-info h1 .primary-text {
+  font-size: 5rem;
+}
+
+.hero-info p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+/**********************************************************
+  Hero Section End
+**********************************************************/
+
+
+/**********************************************************
+  Header End
+**********************************************************/
+
+
+
+/**********************************************************
+  Three Features Card Section Start
+**********************************************************/
+#features-section {
+  position: relative;
+  top: -5rem;
+  margin-bottom: 5rem;
+}
+
+
+.feature-card {
+  flex-basis: 32%;
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--first);
+  color: var(--white);
+  transition: all .3s linear;
+}
+
+@media (hover:hover) {
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.feature-card:nth-child(2) {
+  background-color: var(--second);
+}
+
+.feature-card:nth-child(3) {
+  background-color: var(--third);
+}
+
+.feature-card .feature-icon {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 1.8rem;
+  font-size: 2rem;
+}
+
+:is(.feature-card, .about-info) h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+:is(.feature-card, .about-info) p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/**********************************************************
+  Three Features Card Section End
+**********************************************************/
+
+/**********************************************************
+  About Section Start
+**********************************************************/
+.about-img-container {
+  flex-basis: 50%;
+}
+
+.about-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-info {
+  flex-basis: 50%;
+  background-color: var(--grey-shade);
+  padding: 2rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-info p {
+  margin-bottom: 2.2rem;
+  text-align: justify;
+}
+
+/**********************************************************
+  About Section End
+**********************************************************/
+
+
+/**********************************************************
+  Projects Section Start
+**********************************************************/
+
+/**********************************************************
+  Projects Section Imgs
+**********************************************************/
+.projects-imgs-container .p-col-3 {
+  width: 33.33%;
+}
+
+.projects-imgs-container .p-col-4 {
+  width: 25%;
+}
+
+:is(.p-col-3, .p-col-4) img {
+  width: 100%;
+  height: 100%;
+  transition: all .3s linear;
+  border: 2px solid var(--black);
+  cursor: pointer;
+}
+
+@media (hover:hover) {
+  .projects-imgs-container img:hover {
+    transform: scale(1.04);
+  }
+}
+
+/**********************************************************
+  Projects Section End
+**********************************************************/
+
+
+/**********************************************************
+  Contact Section Start
+**********************************************************/
+#contact-section form {
+  text-align: center;
+}
+
+#contact-section form :is(input, textarea) {
+  width: 49%;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: var(--light-text);
+  text-transform: uppercase;
+  font-family: var(--font-family-2);
+  font-weight: 500;
+}
+
+#contact-section form textarea {
+  width: 100%;
+}
+
+#contact-section form::placeholder {
+  color: var(--light-text);
+}
+
+/**********************************************************
+  Contact Section End
+**********************************************************/
+
+
+
+/**********************************************************
+  Footer Section Start
+**********************************************************/
+
+
+/**********************************************************
+  Sub Footer Section Start
+**********************************************************/
+.sub-footer-section {
+  background-color: var(--grey-shade);
+  padding-block: 2rem;
+}
+
+.sub-footer-col {
+  flex-basis: 30%;
+}
+
+.sub-footer-col .logo-box {
+  margin-bottom: 1.5rem;
+}
+
+.sub-footer-col h2:not(.logo-box h2) {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.sub-footer-col p {
+  color: var(--light-text);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+.sub-footer-col ul li {
+  color: var(--light-text);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.sub-footer-col ul li i {
+  margin-right: 5px;
+}
+
+.footer-search-box input {
+  margin-bottom: 1rem;
+  width: 100%;
+  color: var(--white);
+}
+
+.footer-search-box input::placeholder {
+  color: var(--white);
+}
+
+
+.footer-search-box button {
+  padding: 8px 10px;
+  font-size: 1.2rem;
+}
+
+
+/**********************************************************
+  Copyright Section Start
+**********************************************************/
+.copyright-section {
+  padding-block: 1rem;
+  background-color: var(--black);
+}
+
+.copyright-section p {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.social-media-icons a {
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  background-color: var(--grey-shade);
+  margin-left: 3px;
+  color: var(--white);
+}
+
+@media (hover:hover) {
+  .social-media-icons a:hover {
+    background-color: var(--white);
+    color: var(--grey-shade);
+  }
+}
+
+
+/**********************************************************
+  Footer Section End
+**********************************************************/
+
+
+/***********************************************************************************************
+  Actual Document Styling End
+***********************************************************************************************/

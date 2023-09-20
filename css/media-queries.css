@@ -1,0 +1,279 @@
+/**********************************************************
+  Media Queries Start
+**********************************************************/
+
+
+@media only screen and (min-width:1800px) {
+  html {
+    font-size: 87%;
+  }
+
+  #hero-section {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-center {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-info {
+    padding-top: 0;
+  }
+
+}
+
+@media only screen and (max-width:1200px) {
+  #hero-section {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width:1100px) and (min-height:801px) {
+  html {
+    font-size: 75%;
+  }
+
+  #hero-section {
+    min-height: 80vh;
+  }
+
+}
+
+
+@media only screen and (max-width:1100px) and (max-height:800px) {
+  html {
+    font-size: 56%;
+  }
+}
+
+
+@media only screen and (max-width:768px) and (min-height:801px) {
+  html {
+    font-size: 75%;
+  }
+
+  #hero-section {
+    min-height: 90vh;
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+
+  section p:not(.section-header p, .hero-info p) {
+    font-size: 1.3rem;
+  }
+
+  .section-header {
+    padding: 0 5rem 5rem;
+  }
+
+  .section-header p,
+  .hero-info p {
+    font-size: 1.5rem;
+  }
+
+  .nav-center {
+    padding-block: 1rem;
+  }
+
+  .toggle-btn {
+    display: grid;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: all .2s linear;
+    opacity: 0;
+  }
+
+  .nav-links.show {
+    opacity: 1;
+  }
+
+  .nav-links ul {
+    justify-content: space-between;
+  }
+
+  .nav-links ul li:first-child a,
+  .nav-links ul li a:hover {
+    color: var(--white);
+    background-color: initial;
+  }
+
+  .feature-card {
+    flex-basis: 49%;
+    margin-bottom: 2rem;
+  }
+
+  .feature-card:nth-child(3) {
+    flex-basis: 100%;
+    margin-bottom: 0;
+  }
+
+  .about-img-container {
+    flex-basis: 50%;
+  }
+
+  .about-img-container,
+  .about-info {
+    flex-basis: 100%;
+  }
+
+
+}
+
+
+@media only screen and (max-width:620px) {
+  html {
+    font-size: 54%;
+  }
+
+  :is(.feature-card, .about-info) h2 {
+    font-size: 2.5rem;
+  }
+
+  .section-header {
+    padding: 0 0 5rem;
+  }
+
+  .section-header h1 {
+    font-size: 3rem;
+
+  }
+
+  .nav-links {
+    background-color: var(--grey-shade);
+    border-left: 5px solid var(--primary-color);
+    height: 0;
+    overflow: hidden;
+  }
+
+  .nav-links.show {
+    height: 30rem;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li a {
+    padding: 2rem 2.5rem;
+    font-size: 1.5rem;
+    display: block;
+  }
+
+
+  .feature-card {
+    flex-basis: 100%;
+  }
+
+  .projects-imgs-container .p-col-3,
+  .projects-imgs-container .p-col-4 {
+    width: 50%;
+  }
+
+  .sub-footer-col {
+    flex-basis: 40%;
+    margin-bottom: 2.5rem;
+  }
+
+  .sub-footer-col:nth-child(3) {
+    flex-basis: 100%;
+    margin-bottom: 0;
+  }
+
+  .sub-footer-col h2:not(.logo-box h2),
+  .sub-footer-col h2 {
+    font-size: 2.4rem;
+  }
+
+  .sub-footer-col p,
+  .sub-footer-col ul li {
+    font-size: 1.4rem;
+  }
+
+  .footer-search-box input {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-search-box button {
+    padding: 8px 10px;
+    font-size: 1.3rem;
+  }
+
+  .copyright-section .copyright-center {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .copyright-section p {
+    font-size: 1.2rem;
+  }
+
+}
+
+
+@media only screen and (max-width:450px) {
+
+
+  html {
+    font-size: 51%;
+  }
+
+  .projects-imgs-container .p-col-3,
+  .projects-imgs-container .p-col-4 {
+    width: 100%;
+  }
+
+
+  #contact-section form :is(input, textarea) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+
+  .sub-footer-col {
+    flex-basis: 100%;
+    margin-bottom: 3rem;
+  }
+
+}
+
+
+
+@media only screen and (max-width:360px) {
+
+  html {
+    font-size: 48%;
+  }
+
+  .section-padding-x {
+    padding-inline: 8px;
+  }
+
+}
+
+@media only screen and (max-width:280px) {
+  body {
+    word-wrap: break-word;
+  }
+
+  html {
+    font-size: 40%;
+  }
+
+
+}
+
+/**********************************************************
+  Media Queries End
+**********************************************************/
