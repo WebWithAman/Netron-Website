@@ -277,7 +277,7 @@ nav {
 **********************************************************/
 #hero-section {
   min-height: 100vh;
-  background: url("../Assets/Images/banner.png") no-repeat scroll right;
+  background: url("../assets/images/banner.png") no-repeat scroll right;
   background-size: 80% 100%;
   position: relative;
 }
